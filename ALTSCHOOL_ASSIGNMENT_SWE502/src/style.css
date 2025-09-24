@@ -1,0 +1,89 @@
+/* General Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main Grid Container */
+.profile-container {
+    display: grid;
+    /* Create two equal-fraction columns */
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    max-width: 900px;
+    width: 100%;
+}
+
+/* Common Styling for all Grid Boxes */
+.grid-item {
+    background-color: #a2f6ff; /* Light blue background */
+    border: 3px solid #ec4899;   /* Pink border */
+    border-radius: 20px;         /* Rounded corners */
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Top "About Me" Section Styling */
+.about-me {
+    /* Make this item span across both columns */
+    grid-column: span 2;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 85px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    /* This makes the div a perfect circle */
+    border-radius: 50%;
+    border: 4px solid #ec4899;
+    background-color: #fff; /* Placeholder background */
+    flex-shrink: 0; /* Prevents the circle from shrinking */
+}
+
+.about-text {
+    flex-grow: 1; /* Allows the text area to take remaining space */
+}
+
+/* Styling for Headings and Lists */
+h2 {
+    color: #be185d;
+    margin-top: 0;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* --- Responsiveness for Smaller Screens --- */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    /* Change the grid to a single column layout */
+    .profile-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Reset the column span for the "About Me" section */
+    .about-me {
+        grid-column: span 1;
+        /* Stack the picture and text vertically */
+        flex-direction: column;
+        text-align: center;
+    }
+}
