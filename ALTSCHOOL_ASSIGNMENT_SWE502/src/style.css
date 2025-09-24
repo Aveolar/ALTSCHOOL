@@ -4,7 +4,6 @@ body {
     background-color: #ffffff;
     color: #333;
     margin: 0;
-    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,17 +36,23 @@ body {
     display: flex;
     align-items: center;
     gap: 25px;
-    padding: 85px;
 }
 
 .profile-pic {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     /* This makes the div a perfect circle */
     border-radius: 50%;
+    overflow: hidden;
     border: 4px solid #ec4899;
     background-color: #fff; /* Placeholder background */
     flex-shrink: 0; /* Prevents the circle from shrinking */
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .about-text {
